@@ -51,10 +51,6 @@ const checkMask = (mask) => {
     });
 };
 
-const calcolaSubnet = () => {
-    console.log("calcola subnet :)");
-};
-
 const isNormalInteger = (str) => {
     const n = Math.floor(Number(str));
     return n !== Infinity && String(n) === str && n >= 0;
@@ -282,18 +278,8 @@ const getData = () => {
             document.getElementById("subnet-ok").style.display = "none";
             document.getElementById("subnet-bad").style.display = "block";
             document.getElementById("subnet-bad").textContent =
-                err?.response?.data || err;
+                (err.response && err.response.data) || err;
             resolve(err);
         }
     });
-};
-
-const showSubnet = () => {
-    document.getElementById("ok-ip").innerHTML = ``;
-    document.getElementById("AAAAA").textContent = "b";
-    document.getElementById("AAAAA").textContent = "b";
-    document.getElementById("AAAAA").textContent = "b";
-
-    document.getElementById("subnet-ok").style.display = "block";
-    document.getElementById("subnet-bad").style.display = "none";
 };
