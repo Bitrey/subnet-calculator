@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import bodyParser from "body-parser";
 import path, { parse } from "path";
@@ -271,4 +274,8 @@ app.get("/from-slash", (req, res) => {
     res.json({ mask, hosts: actualHosts });
 });
 
-app.listen(3000, "127.0.0.1", () => logger.info("Server started"));
+const PORT = Number(process.env.PORT) || 3000;
+const IP = process.env.IP || "127.0.0.1";
+app.listen(PORT, IP, () => {
+    logger.info(`Subnet calculator server started on ${IP}:${PORT}`);
+});
