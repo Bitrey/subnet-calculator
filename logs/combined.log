@@ -8930,3 +8930,47 @@
 {"message":"\u001b[0mGET /index.js \u001b[36m304\u001b[0m 0.750 ms - -\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:40:45","label":"index.ts","metadata":{}}
 {"message":"\u001b[0mGET / \u001b[36m304\u001b[0m 1.393 ms - -\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:40:52","label":"index.ts","metadata":{}}
 {"message":"\u001b[0mGET /index.js \u001b[36m304\u001b[0m 0.567 ms - -\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:40:52","label":"index.ts","metadata":{}}
+{"message":"Server started","level":"info","timestamp":"2021-03-04 17:46:31","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mGET / \u001b[32m200\u001b[0m 6.325 ms - 5534\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:46:31","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mGET /style.css \u001b[32m200\u001b[0m 1.025 ms - 43\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:46:31","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mGET /index.js \u001b[32m200\u001b[0m 1.569 ms - 10112\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:46:31","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mGET /valid-ip?ip=192.168.0. \u001b[33m400\u001b[0m 2.266 ms - 18\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:48:15","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mGET /valid-ip?ip=192.168.0.0 \u001b[32m200\u001b[0m 1.455 ms - 2\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:48:15","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mGET /from-hosts?hosts=3 \u001b[36m304\u001b[0m 1.145 ms - -\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:48:16","label":"index.ts","metadata":{}}
+{"message":"IP: 192.168.0.0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"Richiesti: 6","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"Subnet: 255.255.255.248 /29","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"netLength = 8","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"hostIp = 0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"netLength = 8","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"hostIp = 0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"IP range: 192.168.0.0 - 192.168.0.7","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mPOST / \u001b[32m200\u001b[0m 23.081 ms - 80\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"IP: 192.168.0.0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"Richiesti: 6","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"Subnet: 255.255.255.248 /29","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"netLength = 8","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"hostIp = 0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"netLength = 8","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"hostIp = 0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"IP range: 192.168.0.0 - 192.168.0.7","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mPOST / \u001b[32m200\u001b[0m 4.446 ms - 80\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mGET /from-hosts?hosts=30 \u001b[36m304\u001b[0m 0.910 ms - -\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"IP: 192.168.0.0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"Richiesti: 30","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"Subnet: 255.255.255.224 /27","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"netLength = 32","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"hostIp = 0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"netLength = 32","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"hostIp = 0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"IP range: 192.168.0.0 - 192.168.0.31","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mPOST / \u001b[32m200\u001b[0m 6.152 ms - 82\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"IP: 192.168.0.0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"Richiesti: 30","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"Subnet: 255.255.255.224 /27","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"netLength = 32","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"hostIp = 0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"netLength = 32","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"hostIp = 0","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"IP range: 192.168.0.0 - 192.168.0.31","level":"debug","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
+{"message":"\u001b[0mPOST / \u001b[32m200\u001b[0m 4.562 ms - 82\u001b[0m\n","level":"info","timestamp":"2021-03-04 17:48:17","label":"index.ts","metadata":{}}
