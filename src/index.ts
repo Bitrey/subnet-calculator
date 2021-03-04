@@ -3,8 +3,7 @@ dotenv.config();
 
 import express from "express";
 import bodyParser from "body-parser";
-import path, { parse } from "path";
-import morgan from "morgan";
+import path from "path";
 import { logger, LoggerStream } from "./logger";
 
 class Network {
@@ -122,11 +121,11 @@ class NetworkManager {
     getFirstIp(ip: string, hosts: number): number {
         // 64
         const netLength = hosts + 2;
-        logger.debug(`netLength = ${netLength}`);
+        // logger.debug(`netLength = ${netLength}`);
 
         // 192.168.0.*100*
         const hostIp = this.getHostIp(ip);
-        logger.debug(`hostIp = ${hostIp}`);
+        // logger.debug(`hostIp = ${hostIp}`);
 
         let currentIp = 0;
         while (
@@ -163,7 +162,10 @@ class NetworkManager {
 const networkManager = new NetworkManager();
 
 const app = express();
-app.use(morgan("dev", { stream: new LoggerStream() }));
+if (process.env.NODE_ENV !== "production") {
+    const morgan = require("morgan");
+    app.use(morgan("dev", { stream: new LoggerStream() }));
+}
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -206,19 +208,19 @@ app.post("/", (req, res) => {
     else if (!networkManager.isValidHostsNum(host))
         return res.status(400).send("Invalid host number");
 
-    logger.debug(`IP: ${ip}`);
+    // logger.debug(`IP: ${ip}`);
 
     const maxHosts = networkManager.getHostNumber(hostsNum);
-    logger.debug(`Richiesti: ${maxHosts}`);
+    // logger.debug(`Richiesti: ${maxHosts}`);
 
     const mask = networkManager.getMaskFromHosts(hostsNum);
     const slash = networkManager.getSlash(hostsNum);
-    logger.debug(`Subnet: 255.255.255.${mask} /${slash}`);
+    // logger.debug(`Subnet: 255.255.255.${mask} /${slash}`);
 
     const baseIp = networkManager.getBaseIp(ip as any);
     const firstIp = networkManager.getFirstIp(ip as any, maxHosts);
     const lastIp = networkManager.getLastIp(ip as any, maxHosts);
-    logger.debug(`IP range: ${baseIp}.${firstIp} - ${baseIp}.${lastIp}`);
+    // logger.debug(`IP range: ${baseIp}.${firstIp} - ${baseIp}.${lastIp}`);
 
     res.json({ baseIp, firstIp, lastIp, mask, slash, maxHosts });
 });
