@@ -17,35 +17,121 @@
   </head>
   <body>
     <div class="container pt-3">
-      <h1>Subnet calculator</h1>
+      <hr class="my-4" />
+
+      <div class="jumbotron">
+        <h1 class="display-4" style="font-weight: 600">Subnet calculator</h1>
+        <p class="lead">
+          Simple web tool to help you create subnets.<br />Made by Alessandro
+          Amella
+          <a target="_blank" href="https://www.bitrey.it">www.bitrey.it</a>
+        </p>
+      </div>
+
+      <hr class="my-4" />
 
       <div class="mr-3">
-        <div class="mb-3">
-          <label for="original-network" class="form-label"
-            >Partendo dalla rete</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="original-network"
-            placeholder="192.168.0.1"
-            value="192.168.0.1"
-          />
+        <div>
+          <label for="original-network" class="pb-2">Network</label>
+          <div class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col-12">
+              <div class="input-group">
+                <div class="input-group-text">Any IP...</div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="original-network"
+                  placeholder="192.168.0.1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <label class="pt-4">Mask</label>
+          <div class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col-12">
+              <div class="input-group mt-2">
+                <div class="input-group-text">
+                  <label for="host-number">Max host number</label>
+                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="host-number"
+                  placeholder="62"
+                  min="0"
+                  max="254"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="input-group mt-2">
+                <div class="input-group-text">255.255.255.</div>
+                <input
+                  aria-label="Subnet mask"
+                  type="number"
+                  class="form-control"
+                  id="subnet-mask"
+                  placeholder="192"
+                  min="0"
+                  max="252"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="input-group mt-2">
+                <div class="input-group-text">/</div>
+                <input
+                  aria-label="Slash notation"
+                  type="number"
+                  class="form-control"
+                  id="mask-slash"
+                  placeholder="26"
+                  min="24"
+                  max="30"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row row-cols-lg-auto g-3 mt-2 align-items-center">
+            <div class="col-12">
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="hasTyped(true)"
+              >
+                Calcola subnet
+              </button>
+            </div>
+          </div> -->
+
+          <hr class="my-4" />
+
+          <div class="pb-5" id="result">
+            <div id="subnet-ok" style="display: none">
+              <div class="row">
+                <div class="col-12 col-lg-7">
+                  <h4>Network adress</h4>
+                  <p id="ok-ip">192.168.0.0</p>
+                  <h4>Host address range</h4>
+                  <p id="ok-hostrange">192.168.0.1 &rarr; 192.168.0.254</p>
+                  <h4>Host number</h4>
+                  <p id="ok-hostnumber">254</p>
+                </div>
+                <div class="col-12 col-lg-5">
+                  <h4>Subnet mask</h4>
+                  <p id="ok-mask">255.255.255.0</p>
+                  <h4>Broadcast address</h4>
+                  <p id="ok-broadcast">192.168.0.255</p>
+                </div>
+              </div>
+            </div>
+            <h3 id="subnet-bad">Please enter all the fields</h3>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="host-number" class="form-label">Numero di host</label>
-          <input
-            type="number"
-            min="2"
-            max="254"
-            class="form-control"
-            id="host-number"
-            placeholder="20"
-          />
-        </div>
-        <button type="button" onclick="calcolaSubnet()" class="btn btn-primary">
-          Calcola subnet
-        </button>
       </div>
     </div>
 
