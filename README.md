@@ -1,2 +1,3 @@
-# subnet-calculator
-# subnet-calculator
+# Subnet Calculator
+
+Usato nel corso di telecomunicazioni (ITIS Fermi) per calcolare rapidamente i valori di una rete con subnetting, come lo slash (/24), il numero di host, dove inizia e dove finisce, IP di broadcast ecc...
